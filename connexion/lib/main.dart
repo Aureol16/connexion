@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:connexion/view_data.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -92,6 +93,17 @@ class MyApp extends StatelessWidget {
                 child: Text('Insert'),
               ),
             ),
+            Container(
+              margin: EdgeInsets.all(10),
+              child: Builder(
+                builder: (context) {
+                  return ElevatedButton(
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder:(context)=> ViewData()));
+                    }, child: Text("View Data"));
+                }
+              )
+            )
           ],
         ),
       ),
